@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">MyHiskioCourse</string>
+    <string name="position">position => %s</string>
     <string-array name="course_items">
-        <item>ch 11-3 Recyclerview</item>
+        <item>11-3 Style 樣式與Theme主題</item>
         <item></item>
         <item></item>
     </string-array>
-    <string name="position">position => %s</string>
 </resources>

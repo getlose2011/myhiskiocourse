@@ -1,5 +1,6 @@
 package com.getlose.myhiskiocourse
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,14 @@ class MainActivity : AppCompatActivity() {
     private val callBackFromCourseFun = object : ICourseAdapterListener {
         override fun onCourseSelected(position: Int) {
         Toast.makeText(this@MainActivity,String.format(getString(R.string.position), position),Toast.LENGTH_SHORT).show()
+
+            when (position) {
+                0 ->
+                    Intent(this@MainActivity, ElevenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+
+            }
     }}
 
 }
