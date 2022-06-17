@@ -1,9 +1,11 @@
 package com.getlose.myhiskiocourse
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
+import com.getlose.myhiskiocourse.Adapter.ICourseAdapterListener
 import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -16,9 +18,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var course = listOf<String>("ch 10 Recyclerview")
-        var adapter  = CourseAdapter(course)
+        var course = resources.getStringArray(R.array.course_items)
+        var adapter  = CourseAdapter(course, callBackFromCourseFun)
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
         binding.recyclerview.adapter = adapter
     }
+
+    private val callBackFromCourseFun = object : ICourseAdapterListener {
+        override fun onCourseSelected(position: Int) {
+        Toast.makeText(this@MainActivity,String.format(getString(R.string.position), position),Toast.LENGTH_SHORT).show()
+    }}
+
 }
