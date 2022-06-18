@@ -8,10 +8,34 @@
     android:orientation="vertical"
     tools:context=".ElevenThreeActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="style=>UI元件的一致性\ntheme=>Application與Activity一致性">
+
+    </TextView>
+
+    <!--
+    button 套用 style 變化
+    可切換CustomTheme1,CustomTheme2看變化及套用attr時的變化
+    -->
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="原始的button" />
+        android:text="什麼都沒有加的button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/customButtonStyle"
+        android:text="style套用@style/customButtonStyle的button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="?attr/buttonTextSize"
+        android:text="textSize套用?attr/buttonTextSize的button" />
 
     <Button
         android:layout_width="wrap_content"

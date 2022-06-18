@@ -12,8 +12,28 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="buttonTextColor">#4CAF50</item>
+        <item name="buttonTextSize">50sp</item>
     </style>
 
+    <!-- 自訂Attr -->
+    <style name="customButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?attr/buttonTextColor</item>
+        <item name="android:textSize">?attr/buttonTextSize</item>
+    </style>
+
+    <!-- 自訂主題 -->
+    <style name="CustomTheme1" parent="Theme.MyHiskioCourse">
+        <item name="buttonTextColor">#FFFF00</item>
+        <item name="buttonTextSize">20sp</item>
+    </style>
+
+    <style name="CustomTheme2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="buttonTextColor">#FF0000</item>
+        <item name="buttonTextSize">30sp</item>
+    </style>
+
+    <!-- 自訂style -->
     <style name="ButtonStyle">
         <item name="textAllCaps">false</item>
         <item name="android:padding">16dp</item>
