@@ -1,10 +1,9 @@
 package com.getlose.myhiskiocourse
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.getlose.myhiskiocourse.databinding.ActivityElevenThreeBinding
 
-class ElevenThreeActivity : AppCompatActivity() {
+class ElevenThreeActivity : BaseActivity() {
 
     private lateinit var binding : ActivityElevenThreeBinding
 
