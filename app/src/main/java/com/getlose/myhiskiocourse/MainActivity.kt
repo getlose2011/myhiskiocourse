@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
 import com.getlose.myhiskiocourse.Adapter.ICourseAdapterListener
 import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : BaseActivity() {
 
@@ -38,11 +40,14 @@ class MainActivity : BaseActivity() {
         var adapter  = CourseAdapter(course, callBackFromCourseFun)
         binding.recyclerview.layoutManager = LinearLayoutManager(this)
         binding.recyclerview.adapter = adapter
+
+        initFCM()
     }
 
+    //all courses activity
     private val callBackFromCourseFun = object : ICourseAdapterListener {
         override fun onCourseSelected(position: Int) {
-        Toast.makeText(this@MainActivity,String.format(getString(R.string.position), position),Toast.LENGTH_SHORT).show()
+        Toast.makeText(baseContext,String.format(getString(R.string.position), position),Toast.LENGTH_SHORT).show()
 
             when (position) {
                 0 -> {
@@ -60,7 +65,26 @@ class MainActivity : BaseActivity() {
                     Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
                         startActivity(it)
                     }
+                3 ->
+                    Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
+                        startActivity(it)
+                    }
             }
     }}
+
+    //init fcm
+    private fun initFCM() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                Log.w(TAG, "FCM registration token failed", task.exception)
+                return@OnCompleteListener
+            }
+
+            val token = task.result
+            Log.d(TAG,"Token:$token")
+            Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
+
+        })
+    }
 
 }
