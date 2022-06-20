@@ -10,13 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHiskioCourse">
         <activity
+            android:name=".TwelveOneActivity"
+            android:exported="false" />
+        <activity
             android:name=".ElevenFourActivity"
             android:exported="false" />
-
         <activity
             android:name=".TwentyOneOneActivity"
             android:exported="false" />
-
         <activity
             android:name=".FourTeenOneActivity"
             android:exported="false" />
@@ -38,6 +39,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".Service.MyFirebaseMessagingService"
             android:exported="false">
