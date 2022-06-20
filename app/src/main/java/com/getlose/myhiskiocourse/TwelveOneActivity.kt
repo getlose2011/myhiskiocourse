@@ -23,18 +23,25 @@ class TwelveOneActivity : BaseActivity() {
 
         binding.bottomNavigationView.setOnItemSelectedListener{
             Log.d(TAG, "item id => ${it.itemId}")
+            //取得目前在container裡的Fragment物件
+            val fragmentInstance = supportFragmentManager.findFragmentById(R.id.container)
+            Log.d(TAG, "fragmentInstance => ${fragmentInstance}")
             when(it.itemId){
                 R.id.home->{
-                    changeFragment(R.id.container, TwelveAFragment.newInstance())
+                    if(fragmentInstance !is TwelveAFragment)
+                        changeFragment(R.id.container, TwelveAFragment.newInstance())
                 }
                 R.id.profile->{
-                    changeFragment(R.id.container, TwelveBFragment.newInstance())
+                    if(fragmentInstance !is TwelveBFragment)
+                        changeFragment(R.id.container, TwelveBFragment.newInstance())
                 }
                 R.id.setting->{
-                    changeFragment(R.id.container, TwelveCFragment.newInstance("參數1","參數2"))
+                    if(fragmentInstance !is TwelveCFragment)
+                        changeFragment(R.id.container, TwelveCFragment.newInstance("參數1","參數2"))
                 }
                 else->{
-                    changeFragment(R.id.container, TwelveAFragment.newInstance())
+                    if(fragmentInstance !is TwelveAFragment)
+                        changeFragment(R.id.container, TwelveAFragment.newInstance())
                 }
             }
             return@setOnItemSelectedListener true
