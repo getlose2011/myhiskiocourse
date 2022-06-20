@@ -8,7 +8,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.getlose.myhiskiocourse.MainActivity
+import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.TwentyOneOneActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -48,6 +48,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationBuilder = NotificationCompat.Builder(this)
             .setContentTitle(title)
+            .setSmallIcon(R.drawable.ic_home_24)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(getPendingIntent())
@@ -60,6 +61,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
             .setContentTitle(title)
+            .setSmallIcon(R.drawable.ic_home_24)
             .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(getPendingIntent())
@@ -72,9 +74,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
     }
 
     private fun getPendingIntent(): PendingIntent {
-        val intent = Intent(baseContext, MainActivity::class.java)
+        val intent = Intent(this, TwentyOneOneActivity::class.java)
         return PendingIntent.getActivity(
-            baseContext,
+            this,
             0,
             intent,
             PendingIntent.FLAG_UPDATE_CURRENT
