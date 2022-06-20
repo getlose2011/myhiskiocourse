@@ -3,9 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/drawable/autorenew-48px.xml" value="0.2395" />
+        <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/drawable/ic_autorenew_fill0_wght400_grad0_opsz48.xml" value="0.1" />
+        <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.2395" />
+        <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/activity_eleven_four.xml" value="0.22" />
         <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/activity_eleven_three.xml" value="0.8696741854636592" />
         <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/activity_four_teen_one.xml" value="0.25" />
         <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/activity_main.xml" value="0.17291666666666666" />
+        <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/activity_twenty_one_one.xml" value="0.1875" />
         <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/item_layout.xml" value="0.1875" />
         <entry key="..\:/Win7Users/jenhsiang.chang/AndroidStudioProjects/MyHiskioCourse/app/src/main/res/layout/row_item_course_layout.xml" value="0.1875" />
       </map>

@@ -62,10 +62,14 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 2 ->
-                    Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
+                    Intent(this@MainActivity, ElevenFourActivity::class.java).also {
                         startActivity(it)
                     }
                 3 ->
+                    Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
+                        startActivity(it)
+                    }
+                4 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }
