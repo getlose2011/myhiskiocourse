@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MyHiskioCourse</string>
     <string name="position">position => %s</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="course_items">
         <item>7-3 Intent傳值和回傳值</item>
         <item>11-3 Style 樣式與Theme主題興attr使用</item>
