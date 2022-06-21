@@ -9,8 +9,8 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
-import com.getlose.myhiskiocourse.Adapter.ICourseAdapterListener
 import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
+import com.getlose.myhiskiocourse.interfaces.ICourseAdapterListener
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 

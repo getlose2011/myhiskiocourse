@@ -5,13 +5,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.getlose.myhiskiocourse.databinding.RowItemCourseLayoutBinding
+import com.getlose.myhiskiocourse.interfaces.ICourseAdapterListener
 
-
-interface ICourseAdapterListener{
-    fun onCourseSelected(position:Int)
-}
-
-class CourseAdapter(private val courses: Array<String>, private val listener:ICourseAdapterListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class CourseAdapter(private val courses: Array<String>, private val listener: ICourseAdapterListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = RowItemCourseLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
