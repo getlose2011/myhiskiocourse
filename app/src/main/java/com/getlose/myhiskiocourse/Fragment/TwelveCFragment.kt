@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.getlose.myhiskiocourse.R
+import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -16,6 +17,7 @@ class TwelveCFragment : Fragment() {
     private var param1:String? = null
     private var param2:String? = null
     private val TAG = TwelveCFragment::class.java.simpleName
+    private lateinit var listener:IBottomNavigationViewListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class TwelveCFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        listener.onSelected()
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_twelve_c, container, false)
     }
@@ -48,12 +51,14 @@ class TwelveCFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1:String, param2:String) =
+        fun newInstance(param1:String, param2:String,listener: IBottomNavigationViewListener) =
             TwelveCFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }
+                this.listener = listener
             }
+
     }
 }

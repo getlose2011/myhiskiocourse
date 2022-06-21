@@ -6,8 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.getlose.myhiskiocourse.R
+import com.getlose.myhiskiocourse.databinding.FragmentTwelveBBinding
+import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
 
 class TwelveBFragment : Fragment() {
+
+    private lateinit var binding : FragmentTwelveBBinding
+    private lateinit var listener:IBottomNavigationViewListener
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +22,18 @@ class TwelveBFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_twelve_b, container, false)
+        binding = FragmentTwelveBBinding.inflate(inflater,container,false)
+
+        binding.button.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container,TwelveCFragment.newInstance("from b","to c",listener))
+                .commit()
+
+        }
+
+        listener.onSelected()
+
+        return binding.root
     }
 
     companion object {
@@ -32,7 +47,9 @@ class TwelveBFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance() =
-            TwelveBFragment()
+        fun newInstance(listener: IBottomNavigationViewListener) =
+            TwelveBFragment().apply {
+                this.listener = listener
+            }
     }
 }

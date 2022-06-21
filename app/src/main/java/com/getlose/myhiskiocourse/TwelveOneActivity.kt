@@ -6,6 +6,8 @@ import com.getlose.myhiskiocourse.Fragment.TwelveAFragment
 import com.getlose.myhiskiocourse.Fragment.TwelveBFragment
 import com.getlose.myhiskiocourse.Fragment.TwelveCFragment
 import com.getlose.myhiskiocourse.databinding.ActivityTwelveOneBinding
+import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
+
 
 class TwelveOneActivity : BaseActivity() {
 
@@ -33,11 +35,11 @@ class TwelveOneActivity : BaseActivity() {
                 }
                 R.id.profile->{
                     if(fragmentInstance !is TwelveBFragment)
-                        changeFragment(R.id.container, TwelveBFragment.newInstance())
+                        changeFragment(R.id.container, TwelveBFragment.newInstance(callBackFromFragmentFun))
                 }
                 R.id.setting->{
                     if(fragmentInstance !is TwelveCFragment)
-                        changeFragment(R.id.container, TwelveCFragment.newInstance("參數1","參數2"))
+                        changeFragment(R.id.container, TwelveCFragment.newInstance("參數1","參數2",callBackFromFragmentFun))
                 }
                 else->{
                     if(fragmentInstance !is TwelveAFragment)
@@ -48,5 +50,25 @@ class TwelveOneActivity : BaseActivity() {
         }
     }
 
+    //更新bottomNavigationView所選的icon
+    private fun updateBottomSelectedItemId() {
+        val fragmentInstance = supportFragmentManager.findFragmentById(R.id.container)
+        var itemId : Int? = null
+        if(fragmentInstance is TwelveAFragment)
+            itemId = R.id.home
+        if(fragmentInstance is TwelveBFragment)
+            itemId = R.id.profile
+        if(fragmentInstance is TwelveCFragment)
+            itemId = R.id.setting
 
+        if(itemId != null)
+            binding.bottomNavigationView.selectedItemId = itemId
+    }
+
+    //fragment 載入時回傳此方法
+    private val callBackFromFragmentFun = object : IBottomNavigationViewListener {
+        override fun onSelected() {
+            updateBottomSelectedItemId()
+        }
+    }
 }
