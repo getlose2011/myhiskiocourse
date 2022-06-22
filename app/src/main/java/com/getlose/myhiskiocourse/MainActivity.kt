@@ -42,6 +42,23 @@ class MainActivity : BaseActivity() {
         binding.recyclerview.adapter = adapter
 
         initFCM()
+        receiveFcmMessage()
+    }
+
+    ///接收FCM傳來的訊息
+    private fun receiveFcmMessage() {
+        val type = intent.getStringExtra("type")?:""
+        val title = intent.getStringExtra("title")?:""
+        val data = intent.getStringExtra("data")?:""
+
+        Log.d(TAG, "receiveFcmMessage: type: $type, title: $title, data: $data")
+
+        if(type == "push"){
+            startActivity(Intent(this, TwentyOneOneActivity::class.java).apply {
+                putExtra("title",title)
+                putExtra("data",data)
+            })
+        }
     }
 
     //all courses activity

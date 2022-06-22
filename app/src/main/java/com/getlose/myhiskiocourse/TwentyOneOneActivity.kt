@@ -1,6 +1,5 @@
 package com.getlose.myhiskiocourse
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.getlose.myhiskiocourse.databinding.ActivityTwentyOneOneBinding
 
@@ -15,8 +14,12 @@ class TwentyOneOneActivity : BaseActivity() {
 
         binding = ActivityTwentyOneOneBinding.inflate(layoutInflater)
 
-        setContentView(R.layout.activity_twenty_one_one)
+        setContentView(binding.root)
 
+        val title = intent.getStringExtra("title")?:""
+        val data = intent.getStringExtra("data")?:""
 
+        binding.tvMessage.text = title
+        binding.tvData.text = data
     }
 }

@@ -6,8 +6,10 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
+import com.getlose.myhiskiocourse.MainActivity
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.TwentyOneOneActivity
 import com.google.firebase.messaging.FirebaseMessagingService
@@ -18,9 +20,12 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
 
+
         val id = 0
         val title = remoteMessage.notification?.title ?: ""
         var body = remoteMessage.notification?.body ?: ""
+
+
 
         if ( remoteMessage.data.isNotEmpty()){
             getNotificationValue(remoteMessage.data, "myKey")?.let {
@@ -30,9 +35,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         }
 
         if ( Build.VERSION.SDK_INT >= 26) {
-            showNotificationO(body, title, id, "channel1", "促銷")
+            showNotificationO(body, title, remoteMessage.hashCode(), "文章", "文章",remoteMessage.data)
         }else{
-            showNotification(body, title, id)
+            showNotification(body, title, remoteMessage.hashCode(),remoteMessage.data)
         }
     }
 
@@ -44,27 +49,27 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         }
     }
 
-    private fun showNotification(body: String, title: String, id: Int) {
+    private fun showNotification(body: String, title: String, id: Int,data: Map<String, String>) {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationBuilder = NotificationCompat.Builder(this)
             .setContentTitle(title)
-            .setSmallIcon(R.drawable.ic_home_24)
             .setContentText(body)
+            .setSmallIcon(R.drawable.ic_message_24)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setContentIntent(getPendingIntent())
+            .setContentIntent(getPendingIntent(data))
             .build()
         notificationManager.notify(id, notificationBuilder)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun showNotificationO(body: String, title: String, id: Int, channelId:String, channelName:String) {
+    private fun showNotificationO(body: String, title: String, id: Int, channelId:String, channelName:String,data: Map<String, String>) {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
             .setContentTitle(title)
-            .setSmallIcon(R.drawable.ic_home_24)
             .setContentText(body)
+            .setSmallIcon(R.drawable.ic_message_24)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setContentIntent(getPendingIntent())
+            .setContentIntent(getPendingIntent(data))
             .build()
 
         val notificationChannel = NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH)
@@ -73,8 +78,18 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         notificationManager.notify(id, notificationBuilder)
     }
 
-    private fun getPendingIntent(): PendingIntent {
-        val intent = Intent(this, TwentyOneOneActivity::class.java)
+    private fun getPendingIntent(data: Map<String, String>): PendingIntent {
+
+        val intent = Intent(this, MainActivity::class.java).apply {
+            if ( data.isNotEmpty()){
+                val type = getNotificationValue(data, "type")
+                val title = getNotificationValue(data, "title")
+                val data = getNotificationValue(data, "data")
+                putExtra("type",type)
+                putExtra("title",title)
+                putExtra("data",data)
+            }
+        }
         return PendingIntent.getActivity(
             this,
             0,
