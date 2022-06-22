@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.getlose.myhiskiocourse.R
-import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
+import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"

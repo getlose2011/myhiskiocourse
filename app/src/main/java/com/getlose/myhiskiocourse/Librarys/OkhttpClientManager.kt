@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.librarys
+package com.getlose.myhiskiocourse.Librarys
 
 import android.util.Log
 import okhttp3.*

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.getlose.myhiskiocourse.databinding.RowItemCourseLayoutBinding
-import com.getlose.myhiskiocourse.interfaces.ICourseAdapterListener
+import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
 
 class CourseAdapter(private val courses: Array<String>, private val listener: ICourseAdapterListener) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 

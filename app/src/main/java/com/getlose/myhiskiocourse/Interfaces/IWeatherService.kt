@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.interfaces
+package com.getlose.myhiskiocourse.Interfaces
 
 
 import com.getlose.myhiskiocourse.Models.WeatherResponseModel

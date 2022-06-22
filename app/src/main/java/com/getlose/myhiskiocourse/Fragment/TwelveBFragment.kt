@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.FragmentTwelveBBinding
-import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
+import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
 
 class TwelveBFragment : Fragment() {
 

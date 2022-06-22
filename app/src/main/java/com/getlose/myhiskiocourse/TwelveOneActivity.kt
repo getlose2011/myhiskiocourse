@@ -6,7 +6,7 @@ import com.getlose.myhiskiocourse.Fragment.TwelveAFragment
 import com.getlose.myhiskiocourse.Fragment.TwelveBFragment
 import com.getlose.myhiskiocourse.Fragment.TwelveCFragment
 import com.getlose.myhiskiocourse.databinding.ActivityTwelveOneBinding
-import com.getlose.myhiskiocourse.interfaces.IBottomNavigationViewListener
+import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
 
 
 class TwelveOneActivity : BaseActivity() {

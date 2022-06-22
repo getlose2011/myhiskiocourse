@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.interfaces
+package com.getlose.myhiskiocourse.Interfaces
 
 interface IBottomNavigationViewListener {
     fun onSelected()

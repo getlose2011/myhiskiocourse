@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.librarys
+package com.getlose.myhiskiocourse.Librarys
 
 object Config {
 

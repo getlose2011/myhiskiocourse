@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.WeatherAdapter
 import com.getlose.myhiskiocourse.Models.WeatherResponseModel
 import com.getlose.myhiskiocourse.databinding.ActivitySevenTeenThreeActivityBinding
-import com.getlose.myhiskiocourse.interfaces.IWeatherService
-import com.getlose.myhiskiocourse.librarys.OkhttpClientManager
+import com.getlose.myhiskiocourse.Interfaces.IWeatherService
+import com.getlose.myhiskiocourse.Librarys.OkhttpClientManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
