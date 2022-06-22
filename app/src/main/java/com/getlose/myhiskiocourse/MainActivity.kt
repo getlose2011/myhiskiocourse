@@ -91,6 +91,10 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 5 ->
+                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+                6 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }

@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHiskioCourse">
         <activity
+            android:name=".SevenTeenThreeActivity"
+            android:exported="false" />
+        <activity
             android:name=".TwelveOneActivity"
             android:exported="false" />
         <activity
