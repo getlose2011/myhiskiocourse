@@ -6,6 +6,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class OkhttpClientManager {
 
     private val retrofit: Retrofit
@@ -45,4 +46,5 @@ class OkhttpClientManager {
         val client: Retrofit
             get() = manager.retrofit
     }
+
 }
