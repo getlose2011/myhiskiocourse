@@ -4,6 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="course_items">
         <item>7-3 Intent傳值和回傳值</item>
+        <item>8-5 DatePicker TimePicker 日期時間選取器</item>
         <item>11-3 Style 樣式與Theme主題興attr使用</item>
         <item>11-4 匯入向量圖Vector Drawable</item>
         <item>12-1 使用Fragment來切換頁面,用Bottom Navigation切換</item>

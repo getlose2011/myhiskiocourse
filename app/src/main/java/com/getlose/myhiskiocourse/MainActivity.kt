@@ -75,26 +75,30 @@ class MainActivity : BaseActivity() {
                     startActivityLauncher.launch(intent)
                 }
                 1 ->
-                    Intent(this@MainActivity, ElevenThreeActivity::class.java).also {
+                    Intent(this@MainActivity, EightFiveActivity::class.java).also {
                         startActivity(it)
                     }
                 2 ->
-                    Intent(this@MainActivity, ElevenFourActivity::class.java).also {
+                    Intent(this@MainActivity, ElevenThreeActivity::class.java).also {
                         startActivity(it)
                     }
                 3 ->
-                    Intent(this@MainActivity, TwelveOneActivity::class.java).also {
+                    Intent(this@MainActivity, ElevenFourActivity::class.java).also {
                         startActivity(it)
                     }
                 4 ->
-                    Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
+                    Intent(this@MainActivity, TwelveOneActivity::class.java).also {
                         startActivity(it)
                     }
                 5 ->
-                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                    Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
                         startActivity(it)
                     }
                 6 ->
+                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+                7 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }
