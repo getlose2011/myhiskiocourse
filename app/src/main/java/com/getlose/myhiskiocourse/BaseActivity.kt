@@ -1,9 +1,13 @@
 package com.getlose.myhiskiocourse
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -19,6 +23,25 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //新增2個Channel，不管有沒有收到推播，都可以先設定Channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            createChannel("促銷", "促銷","promotion")
+            createChannel("會員", "會員","member")
+            createChannel("文章", "文章","article")
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun createChannel(channelId: String, channelName: String, description: String) {
+        //先建立Channel
+        val notificationManager =
+            getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+
+        val notificationChannel =
+            NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH)
+        notificationChannel.description = description
+        notificationManager.createNotificationChannel(notificationChannel)
     }
 
 	//切換 Fragment

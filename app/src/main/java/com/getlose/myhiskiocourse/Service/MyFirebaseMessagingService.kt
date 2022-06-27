@@ -17,15 +17,18 @@ import com.google.firebase.messaging.RemoteMessage
 
 class MyFirebaseMessagingService : FirebaseMessagingService(){
 
+    private val TAG = "MyFirebaseMessagingService"
+
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
 
 
         val id = 0
+        val channelId = remoteMessage.notification?.channelId ?: ""
         val title = remoteMessage.notification?.title ?: ""
         var body = remoteMessage.notification?.body ?: ""
 
-
+        Log.d(TAG, "onMessageReceived: ${remoteMessage.notification?.channelId}")
 
         if ( remoteMessage.data.isNotEmpty()){
             getNotificationValue(remoteMessage.data, "myKey")?.let {
@@ -35,7 +38,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService(){
         }
 
         if ( Build.VERSION.SDK_INT >= 26) {
-            showNotificationO(body, title, remoteMessage.hashCode(), "文章", "文章",remoteMessage.data)
+            showNotificationO(body, title, remoteMessage.hashCode(), channelId, channelId,remoteMessage.data)
         }else{
             showNotification(body, title, remoteMessage.hashCode(),remoteMessage.data)
         }
