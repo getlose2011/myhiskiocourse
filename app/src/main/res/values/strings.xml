@@ -8,6 +8,7 @@
         <item>11-3 Style 樣式與Theme主題興attr使用</item>
         <item>11-4 匯入向量圖Vector Drawable</item>
         <item>12-1 使用Fragment來切換頁面,用Bottom Navigation切換</item>
+        <item>13-1 使用SharedPreferences儲存資料</item>
         <item>13-2 儲存檔案到內部空間使用Glide library</item>
         <item>14-1 android非同步與執行緒</item>
         <item>17-3 App串接公開資料API：使用Retrofit</item>
