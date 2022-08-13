@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyHiskioCourse"
         tools:ignore="Instantiatable">
         <activity
+            android:name=".FifTeenThreeAActivity"
+            android:exported="false" />
+        <activity
             android:name=".ThirteenOneActivity"
             android:exported="false" />
         <activity

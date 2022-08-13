@@ -11,6 +11,7 @@
         <item>13-1 使用SharedPreferences儲存資料</item>
         <item>13-2 儲存檔案到內部空間使用Glide library</item>
         <item>14-1 android非同步與執行緒</item>
+        <item>15-3a 資料儲存 Room</item>
         <item>17-3 App串接公開資料API：使用Retrofit</item>
         <item>21-1 Firebase cloud message 推播</item>
     </string-array>
