@@ -1,5 +1,6 @@
 package com.getlose.myhiskiocourse
 
+
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -16,7 +17,7 @@ import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : BaseActivity() {
 
-    private val TAG = MainActivity::class.java.simpleName
+	private val TAG = MainActivity::class.java.simpleName
     private lateinit var binding: ActivityMainBinding
     //取得活動結果
     private val startActivityLauncher: ActivityResultLauncher<Intent> =
@@ -43,7 +44,10 @@ class MainActivity : BaseActivity() {
 
         initFCM()
         receiveFcmMessage()
+        
+        
     }
+
 
     ///接收FCM傳來的訊息
     private fun receiveFcmMessage() {
@@ -107,10 +111,14 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 9 ->
-                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
                         startActivity(it)
                     }
                 10 ->
+                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+                11 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }
