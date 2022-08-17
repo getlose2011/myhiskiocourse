@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyHiskioCourse"
         tools:ignore="Instantiatable">
         <activity
+            android:name=".FifTeenOneActivity"
+            android:exported="false" />
+        <activity
             android:name=".FifTeenThreeBActivity"
             android:exported="false" />
         <activity
@@ -70,6 +73,7 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <service android:name=".Service.MyService" />
     </application>
 
 </manifest>

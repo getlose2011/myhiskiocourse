@@ -10,8 +10,8 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
-import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
 import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
+import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
 
@@ -45,8 +45,8 @@ class MainActivity : BaseActivity() {
         initFCM()
         receiveFcmMessage()
         
-        
-    }
+	
+	}
 
 
     ///接收FCM傳來的訊息
@@ -107,18 +107,22 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 8 ->
-                    Intent(this@MainActivity, FifTeenThreeAActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenOneActivity::class.java).also {
                         startActivity(it)
                     }
                 9 ->
-                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenThreeAActivity::class.java).also {
                         startActivity(it)
                     }
                 10 ->
-                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
                         startActivity(it)
                     }
                 11 ->
+                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+                12 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }
