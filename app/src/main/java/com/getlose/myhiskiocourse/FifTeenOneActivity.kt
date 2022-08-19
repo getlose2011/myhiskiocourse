@@ -10,7 +10,6 @@ import com.getlose.myhiskiocourse.databinding.ActivityFifTeenOneBinding
 
 class FifTeenOneActivity : AppCompatActivity() {
 
-    //private var service : Intent? = null//Intent(this, MyService::class.java)
     private val TAG = FifTeenOneActivity::class.java.simpleName
     private lateinit var binding: ActivityFifTeenOneBinding
     private  var service : Intent? = null

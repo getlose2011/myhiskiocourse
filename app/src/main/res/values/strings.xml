@@ -12,6 +12,7 @@
         <item>13-2 儲存檔案到內部空間使用Glide library</item>
         <item>14-1 android非同步與執行緒</item>
         <item>15-1 Service 背景服務</item>
+        <item>15-2 Broadcast 廣播</item>
         <item>15-3a 資料儲存 Room</item>
         <item>15-3b 內容提供器 Content Provider 與危險權限機制實作</item>
         <item>17-3 App串接公開資料API：使用Retrofit</item>
