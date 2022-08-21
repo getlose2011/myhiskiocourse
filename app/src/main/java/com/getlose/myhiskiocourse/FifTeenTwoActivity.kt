@@ -32,15 +32,16 @@ class FifTeenTwoActivity : AppCompatActivity() {
         }
     }
 
-    //有前景頁面呈現時
+    //使用者可以開始互動
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume: ")
+        //filter攔截訊息
         val filter = IntentFilter("com.getlose.myhiskiocourse.action1")
         registerReceiver(receiver,filter)
     }
 
-    //當離開頁面時
+    //使用者正要離開，Activity不在前景，釋放系統資源
     override fun onPause() {
         super.onPause()
         Log.d(TAG, "onPause: ")
