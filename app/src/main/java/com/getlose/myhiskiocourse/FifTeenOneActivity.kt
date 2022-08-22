@@ -1,6 +1,5 @@
 package com.getlose.myhiskiocourse
 
-import android.app.Service
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +24,10 @@ class FifTeenOneActivity : AppCompatActivity() {
 
         binding.button4.setOnClickListener {
             startActivity(Intent(this,FifTeenOneAActivity::class.java))
+        }
+
+        binding.btnWorker.setOnClickListener {
+            startActivity(Intent(this,FifTeenOneBActivity::class.java))
         }
     }
 
