@@ -107,26 +107,30 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 8 ->
-                    Intent(this@MainActivity, FifTeenOneActivity::class.java).also {
+                    Intent(this@MainActivity, FourTeenTwoActivity::class.java).also {
                         startActivity(it)
                     }
                 9 ->
-                    Intent(this@MainActivity, FifTeenTwoActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenOneActivity::class.java).also {
                         startActivity(it)
                     }
                 10 ->
-                    Intent(this@MainActivity, FifTeenThreeAActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenTwoActivity::class.java).also {
                         startActivity(it)
                     }
                 11 ->
-                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenThreeAActivity::class.java).also {
                         startActivity(it)
                     }
                 12 ->
-                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
                         startActivity(it)
                     }
                 13 ->
+                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
+                        startActivity(it)
+                    }
+                14 ->
                     Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
                         startActivity(it)
                     }
