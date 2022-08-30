@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.getlose.myhiskiocourse.Application.MyApplication
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.FragmentTwelveBBinding
 import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
@@ -34,6 +36,13 @@ class TwelveBFragment : Fragment() {
         listener.onSelected()
 
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.btnClickToast.setOnClickListener {
+            Toast.makeText(MyApplication.getInstance(),"test",Toast.LENGTH_LONG).show()
+        }
     }
 
     companion object {
