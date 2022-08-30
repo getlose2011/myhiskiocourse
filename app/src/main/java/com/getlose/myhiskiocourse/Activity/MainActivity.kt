@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 
 import android.app.Activity
@@ -11,6 +11,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
 import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
+import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
@@ -36,6 +37,8 @@ class MainActivity : BaseActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+       
 
         var course = resources.getStringArray(R.array.course_items)
         var adapter  = CourseAdapter(course, callBackFromCourseFun)

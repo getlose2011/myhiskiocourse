@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 import android.content.Context
 import android.content.ContextWrapper
@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.ActivityThirteenTwoBinding
 import java.io.File
 import java.io.FileOutputStream

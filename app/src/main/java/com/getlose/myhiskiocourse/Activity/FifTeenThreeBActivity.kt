@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -10,7 +10,6 @@ import android.provider.ContactsContract
 import android.util.Log
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.getlose.myhiskiocourse.databinding.ActivityFifTeenThreeAactivityBinding
 import com.getlose.myhiskiocourse.databinding.ActivityFifTeenThreeBactivityBinding
 
 class FifTeenThreeBActivity : AppCompatActivity() {

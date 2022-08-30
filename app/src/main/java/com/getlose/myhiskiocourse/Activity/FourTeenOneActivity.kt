@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 import android.os.Bundle
 import android.view.View

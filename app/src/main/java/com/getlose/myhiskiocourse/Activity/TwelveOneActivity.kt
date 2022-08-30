@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,7 @@ import com.getlose.myhiskiocourse.Fragment.TwelveBFragment
 import com.getlose.myhiskiocourse.Fragment.TwelveCFragment
 import com.getlose.myhiskiocourse.databinding.ActivityTwelveOneBinding
 import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
+import com.getlose.myhiskiocourse.R
 
 
 class TwelveOneActivity : BaseActivity() {
@@ -29,15 +30,15 @@ class TwelveOneActivity : BaseActivity() {
             val fragmentInstance = supportFragmentManager.findFragmentById(R.id.container)
             Log.d(TAG, "fragmentInstance => ${fragmentInstance}")
             when(it.itemId){
-                R.id.home->{
+                R.id.home ->{
                     if(fragmentInstance !is TwelveAFragment)
                         changeFragment(R.id.container, TwelveAFragment.newInstance())
                 }
-                R.id.profile->{
+                R.id.profile ->{
                     if(fragmentInstance !is TwelveBFragment)
                         changeFragment(R.id.container, TwelveBFragment.newInstance(callBackFromFragmentFun))
                 }
-                R.id.setting->{
+                R.id.setting ->{
                     if(fragmentInstance !is TwelveCFragment)
                         changeFragment(R.id.container, TwelveCFragment.newInstance("參數1","參數2",callBackFromFragmentFun))
                 }

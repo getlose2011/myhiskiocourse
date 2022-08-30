@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
-        android:name=".MyApplication"
+        android:name=".Application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,61 +15,61 @@
         android:theme="@style/Theme.MyHiskioCourse"
         tools:ignore="Instantiatable">
         <activity
-            android:name=".FourTeenTwoActivity"
+            android:name=".Activity.FourTeenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenOneBActivity"
+            android:name=".Activity.FifTeenOneBActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenTwoActivity"
+            android:name=".Activity.FifTeenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenOneAActivity"
+            android:name=".Activity.FifTeenOneAActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenOneActivity"
+            android:name=".Activity.FifTeenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenThreeBActivity"
+            android:name=".Activity.FifTeenThreeBActivity"
             android:exported="false" />
         <activity
-            android:name=".FifTeenThreeAActivity"
+            android:name=".Activity.FifTeenThreeAActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirteenOneActivity"
+            android:name=".Activity.ThirteenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirteenTwoActivity"
+            android:name=".Activity.ThirteenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".EightFiveActivity"
+            android:name=".Activity.EightFiveActivity"
             android:exported="false" />
         <activity
-            android:name=".SevenTeenThreeActivity"
+            android:name=".Activity.SevenTeenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".TwelveOneActivity"
+            android:name=".Activity.TwelveOneActivity"
             android:exported="false" />
         <activity
-            android:name=".ElevenFourActivity"
+            android:name=".Activity.ElevenFourActivity"
             android:exported="false" />
         <activity
-            android:name=".TwentyOneOneActivity"
+            android:name=".Activity.TwentyOneOneActivity"
             android:exported="false" />
         <activity
-            android:name=".FourTeenOneActivity"
+            android:name=".Activity.FourTeenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".BaseActivity"
+            android:name=".Activity.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".SevenThreeActivity"
+            android:name=".Activity.SevenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".ElevenThreeActivity"
+            android:name=".Activity.ElevenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

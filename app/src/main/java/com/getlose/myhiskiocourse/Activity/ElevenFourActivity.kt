@@ -1,7 +1,8 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.getlose.myhiskiocourse.R
 
 class ElevenFourActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

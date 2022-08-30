@@ -1,6 +1,5 @@
-package com.getlose.myhiskiocourse
+package com.getlose.myhiskiocourse.Activity
 
-import android.app.Service
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
