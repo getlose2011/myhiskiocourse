@@ -4,6 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="course_items">
         <item>1. Kotlin x Android｜APP 開發到上架完整實戰攻略</item>
+        <item>2. Android UI 進階實戰 - 打造App絕佳體驗</item>
     </string-array>
     <string-array name="course_items_1">
         <item>7-3 Intent傳值和回傳值</item>
@@ -21,5 +22,8 @@
         <item>15-3b 內容提供器 Content Provider 與危險權限機制實作</item>
         <item>17-3 App串接公開資料API：使用Retrofit</item>
         <item>21-1 Firebase cloud message 推播</item>
+    </string-array>
+    <string-array name="course_items_2">
+        <item>6-4 自定義View：CustomView</item>
     </string-array>
 </resources>

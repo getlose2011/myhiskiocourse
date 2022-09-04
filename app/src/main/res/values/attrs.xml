@@ -2,4 +2,11 @@
 <resources>
     <attr name="buttonTextColor" format="color"/>
     <attr name="buttonTextSize" format="dimension"/>
+
+    <!--custom NumberSelect attributes-->
+    <declare-styleable name="NumberSelect">
+        <attr name="default_value" format="integer" />
+        <attr name="min_value" format="integer" />
+        <attr name="max_value" format="integer" />
+    </declare-styleable>
 </resources>

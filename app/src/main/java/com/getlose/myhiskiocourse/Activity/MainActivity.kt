@@ -60,6 +60,11 @@ class MainActivity : BaseActivity() {
                         startActivity(it)
                     }
                 }
+                1 -> {
+                    Intent(this@MainActivity, TwoCourseActivity::class.java).also {
+                        startActivity(it)
+                    }
+                }
             }
     }}
 
