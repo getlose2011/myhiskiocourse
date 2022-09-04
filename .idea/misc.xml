@@ -36,7 +36,8 @@
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/drawable/ic_message_24.xml" value="0.112" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/drawable/ic_profile_24.xml" value="0.112" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/drawable/ic_setting_24.xml" value="0.112" />
-        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_eight_five.xml" value="0.1" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/drawable/number_select_background.xml" value="0.1475" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_eight_five.xml" value="0.6" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_fif_teen_one.xml" value="0.16666666666666666" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_fif_teen_one_aactivity.xml" value="0.1351004702864472" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_fif_teen_one_bactivity.xml" value="0.1470713980333476" />
@@ -44,12 +45,16 @@
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_fif_teen_three_bactivity.xml" value="0.1" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_fif_teen_two.xml" value="0.1470713980333476" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_four_teen_one_two.xml" value="0.1470713980333476" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_material.xml" value="0.3333333333333333" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_one_course.xml" value="0.16666666666666666" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_thirteen_one.xml" value="0.3333333333333333" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_thirteen_two.xml" value="0.25" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/activity_two.xml" value="0.1" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/content_material.xml" value="0.1470713980333476" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/fragment_first.xml" value="0.1470713980333476" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/fragment_twelve_b.xml" value="0.3291866028708134" />
+        <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/number_select.xml" value="0.3333333333333333" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/row_item_course_layout.xml" value="0.1" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/row_item_weather_layout.xml" value="0.1" />
         <entry key="..\:/android/myhiskiocourse/app/src/main/res/layout/row_item_weather_odd_layout.xml" value="0.3333333333333333" />

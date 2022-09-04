@@ -1,13 +1,9 @@
 package com.getlose.myhiskiocourse.Activity
 
-
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
 import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
@@ -20,25 +16,12 @@ class MainActivity : BaseActivity() {
 
 	private val TAG = MainActivity::class.java.simpleName
     private lateinit var binding: ActivityMainBinding
-    //取得活動結果
-    private val startActivityLauncher: ActivityResultLauncher<Intent> =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()){activityResult->
-            //第2頁回傳資料
-            if ( activityResult.resultCode == Activity.RESULT_OK){
-                val name = activityResult.data!!.getStringExtra(INTENT_KEY_NAME)
-                Log.d(TAG, "name: 按了修改鍵,修改後的name=>$name")
-            }else if ( activityResult.resultCode == Activity.RESULT_CANCELED){
-                Log.d(TAG, "name: 按了取消鍵")
-            }
-        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-       
 
         var course = resources.getStringArray(R.array.course_items)
         var adapter  = CourseAdapter(course, callBackFromCourseFun)
@@ -47,10 +30,8 @@ class MainActivity : BaseActivity() {
 
         initFCM()
         receiveFcmMessage()
-        
 	
 	}
-
 
     ///接收FCM傳來的訊息
     private fun receiveFcmMessage() {
@@ -75,68 +56,10 @@ class MainActivity : BaseActivity() {
 
             when (position) {
                 0 -> {
-                    val name = "7-3 intent"
-                    val intent = Intent(this@MainActivity, SevenThreeActivity::class.java)
-                    intent.putExtra(INTENT_KEY_NAME, name)
-
-                    startActivityLauncher.launch(intent)
+                    Intent(this@MainActivity, OneCourseActivity::class.java).also {
+                        startActivity(it)
+                    }
                 }
-                1 ->
-                    Intent(this@MainActivity, EightFiveActivity::class.java).also {
-                        startActivity(it)
-                    }
-                2 ->
-                    Intent(this@MainActivity, ElevenThreeActivity::class.java).also {
-                        startActivity(it)
-                    }
-                3 ->
-                    Intent(this@MainActivity, ElevenFourActivity::class.java).also {
-                        startActivity(it)
-                    }
-                4 ->
-                    Intent(this@MainActivity, TwelveOneActivity::class.java).also {
-                        startActivity(it)
-                    }
-                5 ->
-                    Intent(this@MainActivity, ThirteenOneActivity::class.java).also {
-                        startActivity(it)
-                    }
-                6 ->
-                    Intent(this@MainActivity, ThirteenTwoActivity::class.java).also {
-                        startActivity(it)
-                    }
-                7 ->
-                    Intent(this@MainActivity, FourTeenOneActivity::class.java).also {
-                        startActivity(it)
-                    }
-                8 ->
-                    Intent(this@MainActivity, FourTeenTwoActivity::class.java).also {
-                        startActivity(it)
-                    }
-                9 ->
-                    Intent(this@MainActivity, FifTeenOneActivity::class.java).also {
-                        startActivity(it)
-                    }
-                10 ->
-                    Intent(this@MainActivity, FifTeenTwoActivity::class.java).also {
-                        startActivity(it)
-                    }
-                11 ->
-                    Intent(this@MainActivity, FifTeenThreeAActivity::class.java).also {
-                        startActivity(it)
-                    }
-                12 ->
-                    Intent(this@MainActivity, FifTeenThreeBActivity::class.java).also {
-                        startActivity(it)
-                    }
-                13 ->
-                    Intent(this@MainActivity, SevenTeenThreeActivity::class.java).also {
-                        startActivity(it)
-                    }
-                14 ->
-                    Intent(this@MainActivity, TwentyOneOneActivity::class.java).also {
-                        startActivity(it)
-                    }
             }
     }}
 
