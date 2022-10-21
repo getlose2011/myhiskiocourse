@@ -30,6 +30,10 @@ class TwoCourseActivity : BaseActivity() {
         override fun onCourseSelected(position: Int) {
             when (position) {
                 0 -> {
+                    Intent(this@TwoCourseActivity, TwoThreeTwoActivity::class.java).also {
+                        startActivity(it)                    }
+                }
+                1 -> {
                     Intent(this@TwoCourseActivity, SixFourTwoActivity::class.java).also {
                         startActivity(it)                    }
                 }

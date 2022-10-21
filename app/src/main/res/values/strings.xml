@@ -24,6 +24,9 @@
         <item>21-1 Firebase cloud message 推播</item>
     </string-array>
     <string-array name="course_items_2">
+        <item>2-3 側邊選單: NavigationDrawer</item>
         <item>6-4 自定義View：CustomView</item>
     </string-array>
+    <string name="drawer_open">Drawer opened</string>
+    <string name="drawer_close">Drawer closed</string>
 </resources>
