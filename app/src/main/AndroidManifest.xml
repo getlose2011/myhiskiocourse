@@ -4,7 +4,6 @@
     package="com.getlose.myhiskiocourse">
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-
     <application
         android:name=".Application.MyApplication"
         android:allowBackup="true"
@@ -15,7 +14,7 @@
         android:theme="@style/Theme.MyHiskioCourse"
         tools:ignore="Instantiatable">
         <activity
-            android:name=".Activity.TwoThree_TwoActivity"
+            android:name=".Activity.TwoThreeTwoActivity"
             android:exported="false" />
         <activity
             android:name=".Activity.SixFourTwoActivity"
