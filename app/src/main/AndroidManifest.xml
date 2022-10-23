@@ -80,10 +80,6 @@
             android:name=".Activity.ElevenThreeActivity"
             android:exported="false" />
         <activity
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
-            android:name=".Activity.TwoThreeTwoActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activity.MainActivity"
             android:exported="true">
             <intent-filter>
