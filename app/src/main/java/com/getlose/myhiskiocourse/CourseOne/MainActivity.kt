@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseOne
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
+import com.getlose.myhiskiocourse.CourseTwo.TwoCourseActivity
 import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.ActivityMainBinding

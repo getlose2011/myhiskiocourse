@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseOne
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -45,10 +45,16 @@ open class BaseActivity : AppCompatActivity() {
     }
 
 	//切換 Fragment
-    protected fun changeFragment(containerId:Int, fragment: Fragment){
+    protected fun changeFragment(containerId:Int, fragment: Fragment, tagName:String, addStack:Boolean = false){
+
+        //取得目前在container裡的Fragment物件
+        val currentFragment = supportFragmentManager.findFragmentById(containerId)
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(containerId, fragment)
+
+        transaction.add(containerId, fragment, tagName); // 使用 add 方法。
+        if(addStack)transaction.addToBackStack(fragment::class.java.simpleName)
         transaction.commit()
+
     }
 
     //retrofit callback

@@ -1,4 +1,4 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseOne
 
 import android.content.Intent
 import android.content.IntentFilter

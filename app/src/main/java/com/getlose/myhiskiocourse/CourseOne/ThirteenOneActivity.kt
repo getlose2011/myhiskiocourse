@@ -1,10 +1,8 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseOne
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import com.getlose.myhiskiocourse.databinding.ActivityThirteenOneBinding
-import com.getlose.myhiskiocourse.databinding.ActivityThirteenTwoBinding
 
 class ThirteenOneActivity : AppCompatActivity() {
 

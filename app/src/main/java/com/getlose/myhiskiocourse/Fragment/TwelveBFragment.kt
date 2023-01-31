@@ -1,11 +1,13 @@
 package com.getlose.myhiskiocourse.Fragment
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.getlose.myhiskiocourse.CourseOne.TempToolbarTitleListener
 import com.getlose.myhiskiocourse.Application.MyApplication
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.FragmentTwelveBBinding
@@ -44,7 +46,12 @@ class TwelveBFragment : Fragment() {
             Toast.makeText(MyApplication.getInstance(),"test",Toast.LENGTH_LONG).show()
         }
     }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
 
+
+        (activity as TempToolbarTitleListener).updateTitle("custom B title")
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

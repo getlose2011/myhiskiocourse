@@ -1,9 +1,10 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseTwo
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.getlose.myhiskiocourse.Adapter.CourseAdapter
+import com.getlose.myhiskiocourse.CourseOne.BaseActivity
 import com.getlose.myhiskiocourse.Interfaces.ICourseAdapterListener
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.ActivityTwoCourseBinding
@@ -30,11 +31,11 @@ class TwoCourseActivity : BaseActivity() {
         override fun onCourseSelected(position: Int) {
             when (position) {
                 0 -> {
-                    Intent(this@TwoCourseActivity, TwoThreeTwoActivity::class.java).also {
+                    Intent(this@TwoCourseActivity, TwoThreeActivity::class.java).also {
                         startActivity(it)                    }
                 }
                 1 -> {
-                    Intent(this@TwoCourseActivity, SixFourTwoActivity::class.java).also {
+                    Intent(this@TwoCourseActivity, SixFourActivity::class.java).also {
                         startActivity(it)                    }
                 }
 

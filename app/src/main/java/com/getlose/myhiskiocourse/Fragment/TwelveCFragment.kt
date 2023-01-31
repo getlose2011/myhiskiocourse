@@ -1,11 +1,13 @@
 package com.getlose.myhiskiocourse.Fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.getlose.myhiskiocourse.CourseOne.TempToolbarTitleListener
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.Interfaces.IBottomNavigationViewListener
 
@@ -18,6 +20,13 @@ class TwelveCFragment : Fragment() {
     private var param2:String? = null
     private val TAG = TwelveCFragment::class.java.simpleName
     private lateinit var listener:IBottomNavigationViewListener
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+
+        (activity as TempToolbarTitleListener).updateTitle("custom c title")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,73 +14,73 @@
         android:theme="@style/Theme.MyHiskioCourse"
         tools:ignore="Instantiatable">
         <activity
-            android:name=".Activity.TwoThreeTwoActivity"
+            android:name=".CourseTwo.TwoThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.SixFourTwoActivity"
+            android:name=".CourseTwo.SixFourActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.TwoCourseActivity"
+            android:name=".CourseTwo.TwoCourseActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.OneCourseActivity"
+            android:name=".CourseOne.OneCourseActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FourTeenTwoActivity"
+            android:name=".CourseOne.FourTeenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenOneBActivity"
+            android:name=".CourseOne.FifTeenOneBActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenTwoActivity"
+            android:name=".CourseOne.FifTeenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenOneAActivity"
+            android:name=".CourseOne.FifTeenOneAActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenOneActivity"
+            android:name=".CourseOne.FifTeenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenThreeBActivity"
+            android:name=".CourseOne.FifTeenThreeBActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FifTeenThreeAActivity"
+            android:name=".CourseOne.FifTeenThreeAActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ThirteenOneActivity"
+            android:name=".CourseOne.ThirteenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ThirteenTwoActivity"
+            android:name=".CourseOne.ThirteenTwoActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.EightFiveActivity"
+            android:name=".CourseOne.EightFiveActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.SevenTeenThreeActivity"
+            android:name=".CourseOne.SevenTeenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.TwelveOneActivity"
+            android:name=".CourseOne.TwelveOneActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ElevenFourActivity"
+            android:name=".CourseOne.ElevenFourActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.TwentyOneOneActivity"
+            android:name=".CourseOne.TwentyOneOneActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.FourTeenOneActivity"
+            android:name=".CourseOne.FourTeenOneActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.BaseActivity"
+            android:name=".CourseOne.BaseActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.SevenThreeActivity"
+            android:name=".CourseOne.SevenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.ElevenThreeActivity"
+            android:name=".CourseOne.ElevenThreeActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".CourseOne.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

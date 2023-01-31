@@ -1,15 +1,15 @@
-package com.getlose.myhiskiocourse.Activity
+package com.getlose.myhiskiocourse.CourseTwo
 
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AppCompatActivity
+import com.getlose.myhiskiocourse.CourseOne.BaseActivity
 import com.getlose.myhiskiocourse.Fragment.TwelveAFragment
 import com.getlose.myhiskiocourse.R
 import com.getlose.myhiskiocourse.databinding.ActivityTwoThreeTwoBinding
 
-class TwoThreeTwoActivity : BaseActivity() {
+class TwoThreeActivity : BaseActivity() {
 
-    val TAG = TwoThreeTwoActivity::class.java.simpleName
+    val TAG = TwoThreeActivity::class.java.simpleName
     private lateinit var binding: ActivityTwoThreeTwoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,7 @@ class TwoThreeTwoActivity : BaseActivity() {
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        changeFragment(R.id.container, TwelveAFragment.newInstance())
+        changeFragment(R.id.container, TwelveAFragment.newInstance(),TwelveAFragment::class.java.simpleName)
 
     }
 }

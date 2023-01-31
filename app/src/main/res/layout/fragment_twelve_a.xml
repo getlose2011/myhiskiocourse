@@ -8,9 +8,18 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txt_a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="fragment a 可以用logd觀察生命週期" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
 
 </FrameLayout>
