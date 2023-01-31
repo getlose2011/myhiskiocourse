@@ -9,7 +9,10 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.getlose.myhiskiocourse.R
 
-
+/*
+Android 提供了讓你很方便讓你將不同的UI元件組成一個客制化的View。
+並將這個組合的View裡的邏輯封裝在一起。這一篇我們要來示範如何透過Custom View Component提高可測試性。
+* */
 //參考 custom view
 //1.https://medium.com/evan-android-note/android-tdd-%E7%B3%BB%E5%88%97-14-%E4%BD%BF%E7%94%A8custom-view-components%E6%8F%90%E5%8D%87%E5%8F%AF%E6%B8%AC%E8%A9%A6%E6%80%A7-c9b5cb4d8e22
 //2.https://medium.com/@ya.coding/android-%E5%AE%A2%E8%A3%BD%E5%8C%96%E5%85%83%E4%BB%B6-%E7%B0%A1%E6%98%93%E7%89%88-5334681926ff
